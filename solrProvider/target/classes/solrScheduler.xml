@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+    http://www.springframework.org/schema/cache  
+    http://www.springframework.org/schema/cache/spring-cache-4.1.xsd
+    http://code.alibabatech.com/schema/dubbo      
+     http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+    ">
+	<context:annotation-config />
+	 <bean id ="makeSolrFile"  class = " com.solr.make.MakeSolrFile"  >
+	</bean>
+	<!-- 同步goodsBsic任务 -->
+	 <bean id="goodsBasicScheduler" class ="com.solr.make.AbstractSolrShedulerInfo">
+		 <property name="querySql"> <!-- 需要插入数据的表的SQL -->
+		 	<value>
+		 		SELECT b.id,b.delivery_no,b.account_id,b.company_id,b.add_user_id,b.create_time as goods_basic_create_time,
+				b.update_user_id,b.audit_person_id,b.company_name,b.consignee_address,b.consignee_email,
+				b.consignee_mobile,b.consignee_name,b.remark,b.`status`,b.on_line,b.stock_type_names,
+				b.total_price,b.total_weight,b.unit_price,b.version,b.audit_cause,b.consignee_coordinate,
+				b.delivery_address,b.delivery_coordinate,b.delivery_email,b.delivery_mobile,b.delivery_name,
+				b.finite_time,b.is_long_time,b.release_time,b.consignee_area_id,b.consignee_area_name,
+				b.delivery_area_id,b.delivery_area_name,b.goods_type_id,b.auditPerson,audit_time,b.hasLock,
+				b.embark_weight,b.map_kilometer,b.stockTypes,b.time_stamp,b.update_time as goods_basic_update_time,
+				(b.total_weight-b.embark_weight) as surplus_weight,
+				c.`name` as goods_type_name 
+				FROM goods_basic b LEFT JOIN goods_type AS c ON b.goods_type_id = c.id
+				where   b.time_stamp > ? 
+		 	</value>
+		 </property>
+		 <property name="solrName">
+		 	<value>goodsBasic</value>
+		 </property>
+		  <property name="timeStampSql">
+		 	<value> <!-- 时间戳条件SQL -->
+		 		SELECT  1 from goods_basic
+				where   goods_basic.time_stamp > ? 
+				limit 1 ,1
+		 	</value>
+		 </property>
+		 <property name = "timeStampName">
+		 	<value>time_stamp</value>
+		 </property>
+	 </bean>
+	 
+	 
+	 <!-- 同步robOrderRecord任务 -->
+	 <bean id="robOrderRecordScheduler" class ="com.solr.make.AbstractSolrShedulerInfo">
+		 <property name="querySql"> <!-- 需要插入数据的表的SQL -->
+		 	<value>
+		 		SELECT a.id,a.rob_order_no,b.delivery_area_name,b.delivery_coordinate,b.consignee_area_name,
+				b.consignee_coordinate,b.is_long_time,b.finite_time,a.companyName,c. NAME AS goods_type_name,
+				a.weight,a.unit_price,a.total_price,a.status status,b.delivery_name,b.consignee_name,b.total_weight 
+				goods_total_weight,b.map_kilometer,a.create_time rob_order_time,b.create_time goods_basic_create_time,
+				a.time_stamp, a.update_time as rob_order_record_update_time,
+				b.unit_price goods_unit_price,b.company_name AS goods_company_name,
+				a.remark,b.remark as goods_basic_remark,
+				a.account_id 
+			    FROM rob_order_record AS a LEFT JOIN goods_basic AS b ON 
+				a.goods_baice_id = b.id LEFT JOIN goods_type AS c ON b.goods_type_id = c.id WHERE 
+				a.time_stamp >?   
+		 	</value>
+		 </property>
+		 <property name="solrName">
+		 	<value>robOrderRecord</value>
+		 </property>
+		  <property name="timeStampSql">
+		 	<value> <!-- 时间戳条件SQL -->
+		 		SELECT  1 from rob_order_record
+				where   rob_order_record.time_stamp > ? 
+				limit 1 ,1
+		 	</value>
+		 </property>
+		 <property name = "timeStampName">
+		 	<value>time_stamp</value>
+		 </property>
+	 </bean>
+	  <!-- 同步robOrderConfirm任务 -->
+	 <bean id="robOrderConfirmScheduler" class ="com.solr.make.AbstractSolrShedulerInfo">
+		 <property name="querySql"> <!-- 需要插入数据的表的SQL -->
+		 	<value>
+		 	 	SELECT
+	rob_order_confirm.id as id,
+	rob_order_confirm.transport_no,
+	rob_order_confirm.status,
+	goods_basic.id AS goods_basic_id,
+	goods_basic.delivery_address,
+	goods_basic.delivery_area_name,
+	goods_basic.delivery_mobile,
+	goods_basic.delivery_name,
+	goods_basic.delivery_coordinate,
+	goods_basic.consignee_address,
+	goods_basic.consignee_area_name,
+	goods_basic.consignee_coordinate,
+	goods_basic.consignee_name,
+	goods_basic.consignee_mobile,
+	goods_basic.map_kilometer,
+	goods_basic.create_time AS goods_basic_create_time,
+	goods_basic.update_time AS goods_basic_update_time,
+	goods_basic.unit_price AS goods_basic_unit_price,
+	goods_basic.total_price AS goods_basic_total_price,
+	goods_basic.total_weight,
+	goods_basic.company_name AS goods_basic_company_name,
+	goods_basic.remark AS goods_basic_remark,
+	rob_order_confirm.create_time AS rob_order_confirm_create_time,
+	rob_order_confirm.update_time as rob_order_confirm_update_time,
+	rob_order_confirm.confirm_data as rob_order_confirm_confirm_data,
+	rob_order_record.unit_price AS rob_order_unit_price,
+	IFNULL(
+		(
+			SELECT
+				2
+			FROM
+				order_special_apply
+			WHERE
+				rob_order_confirm.id = order_special_apply.rob_orderconfirm_id
+			AND order_special_apply.special_status = 3
+		),
+		0
+	) special_status_success,
+	rob_order_confirm.lock_status,
+	rob_order_confirm.special_status,
+	goods_type.`name` AS goods_type_name,
+
+	rob_order_record.robbed_account_id,
+	rob_order_record.account_id,
+	rob_order_confirm.turck_user_id,
+	rob_order_confirm.transportation_deposit,
+	rob_order_confirm.turck_cost,
+	rob_order_confirm.turck_deposit,
+	rob_order_confirm.transportation_cost,
+	rob_order_record.companyName as rob_order_record_company_name,
+    rob_order_record.remark as rob_order_record_remark,
+	rob_order_confirm.time_stamp
+FROM
+	goods_basic
+JOIN rob_order_record ON goods_basic.id = rob_order_record.goods_baice_id
+JOIN goods_type ON goods_basic.goods_type_id = goods_type.id
+JOIN rob_order_confirm ON rob_order_confirm.rob_order_id = rob_order_record.id
+JOIN mem_account ON mem_account.id = rob_order_record.account_id
+JOIN sys_company ON sys_company.id = mem_account.company_id
+WHERE
+	1 = 1
+AND rob_order_confirm.time_stamp > ?
+
+		 	</value>
+		 </property>
+		 <property name="solrName">
+		 	<value>robOrderConfirm</value>
+		 </property>
+		  <property name="timeStampSql">
+		 	<value> <!-- 时间戳条件SQL -->
+		 		SELECT  1 from rob_order_confirm
+				where   rob_order_confirm.time_stamp > ? 
+				limit 1 ,1
+		 	</value>
+		 </property>
+		 <property name = "timeStampName">
+		 	<value>time_stamp</value>
+		 </property>
+	 </bean>
+	 
+	 <!-- 同步任务队列 -->
+	 <bean id ="solrScheduler" class = "com.provider.SolrScheduler">
+	 	<property name="shedulerInfos">
+	 		<list>
+	 			 <ref bean="goodsBasicScheduler" /> 
+	 			 <ref bean="robOrderRecordScheduler" /> 
+	 			  <ref bean="robOrderConfirmScheduler" /> 
+	 		</list>
+	 	</property>
+	 </bean>
+</beans>

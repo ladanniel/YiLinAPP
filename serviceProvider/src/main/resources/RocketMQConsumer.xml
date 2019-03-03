@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+    http://www.springframework.org/schema/cache  
+    http://www.springframework.org/schema/cache/spring-cache-4.1.xsd">
+ 
+	 
+	<bean id="clientConfig" class="org.apache.rocketmq.client.ClientConfig">
+		<!-- <property name="namesrvAddr" value="192.168.0.201:9876"></property> -->
+		<property name="namesrvAddr" value="127.0.0.1:9876"></property>
+		<property name="clientCallbackExecutorThreads" value="1"></property>
+		<property name="pollNameServerInterval" value="30000"></property>
+		<property name="heartbeatBrokerInterval" value="30000"></property>
+		<property name="persistConsumerOffsetInterval" value="4"></property>
+		<property name="vipChannelEnabled" value="false"></property>
+
+	</bean>
+	<bean id="rechargeSuccessConsumer" class="com.consumer.RechargeConsumer">
+		<property name="consumerGroup" value="xiaoBiaoRen">
+		</property>
+		<property name="clientConfig" ref="clientConfig"></property>
+		<property name="consumerTopic" value="recharge"></property>
+		<!-- <property name="consumerTag" value="success"></property> -->
+	</bean>
+	<!-- 提现 -->
+	<bean id="withdrawConsumer" class="com.consumer.WithdrawConsumer">
+		<property name="consumerGroup" value="xiaoBiaoRenWithdraw">
+		</property>
+		<property name="clientConfig" ref="clientConfig"></property>
+		<property name="consumerTopic" value="withdraw"></property>
+		<!-- <property name="consumerTag" value="success"></property> -->
+	</bean>
+</beans>

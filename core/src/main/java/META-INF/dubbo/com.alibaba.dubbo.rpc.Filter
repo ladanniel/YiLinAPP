@@ -1,0 +1,1 @@
+tokenInterceptor=com.memory.platform.rpc.dubbo.DubboFilter

@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+    http://www.springframework.org/schema/cache  
+    http://www.springframework.org/schema/cache/spring-cache-4.1.xsd
+    http://code.alibabatech.com/schema/dubbo      
+     http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+    ">
+	<context:annotation-config />
+	<aop:aspectj-autoproxy />
+	<bean id="dubboFilter" class="com.memory.platform.rpc.dubbo.DubboFilter"></bean>
+	<context:component-scan base-package="com.memory.platform.module.*.dao" />
+	<!-- <context:component-scan base-package="com.memory.platform.module.*.service" 
+		/> -->
+
+	<!-- 提供方应用信息，用于计算依赖关系 -->
+	<dubbo:application name="xiaoBiaoRenAppProvider" />
+
+	<!-- 使用multicast广播注册中心暴露服务地址 -->
+	<dubbo:registry address="zookeeper://127.0.0.1:2181" />
+	<!-- <dubbo:registry address="zookeeper://192.168.0.200:2181" /> -->
+	<dubbo:provider timeout="60000" retries="0"></dubbo:provider>
+	<!-- 用dubbo协议在20880端口暴露服务 -->
+	<dubbo:protocol name="dubbo" port="20881" />
+
+
+
+
+	<dubbo:service interface="com.memory.platform.module.trace.service.IYYGpsService"
+		ref="yyGpsService" />
+	<bean id="yyGpsService"
+		class="com.memory.platform.module.trace.service.impl.YYGpsService" />
+	<dubbo:service
+		interface="com.memory.platform.module.system.service.IAccountService"
+		ref="accountService" />
+	<bean id="accountService"
+		class="com.memory.platform.module.system.service.impl.AccountService" />
+	<dubbo:service interface="com.memory.platform.module.system.service.IMenuService"
+		ref="menuService" />
+	<bean id="menuService"
+		class="com.memory.platform.module.system.service.impl.MenuService" />
+	<dubbo:service interface="com.memory.platform.module.system.service.IRoleService"
+		ref="roleService" />
+	<bean id="roleService"
+		class="com.memory.platform.module.system.service.impl.RoleService" />
+	<dubbo:service
+		interface="com.memory.platform.module.system.service.ISendMessageService"
+		ref="sendMessageService" />
+	<bean id="sendMessageService"
+		class="com.memory.platform.module.system.service.impl.SendMessageService" />
+	<dubbo:service
+		interface="com.memory.platform.module.account.service.IRegisterService"
+		ref="registerService" />
+	<bean id="registerService"
+		class="com.memory.platform.module.account.service.impl.RegisterService" />
+	<dubbo:service
+		interface="com.memory.platform.module.aut.service.IAuthenticationService"
+		ref="authenticationService" />
+	<bean id="authenticationService"
+		class="com.memory.platform.module.aut.service.impl.AuthenticationService" />
+	<dubbo:service
+		interface="com.memory.platform.module.aut.service.IBusinessLicenseService"
+		ref="businessLicenseService" />
+	<bean id="businessLicenseService"
+		class="com.memory.platform.module.aut.service.impl.BusinessLicenseService" />
+	<dubbo:service
+		interface="com.memory.platform.module.aut.service.IDrivingLicenseService"
+		ref="drivingLicenseService" />
+	<bean id="drivingLicenseService"
+		class="com.memory.platform.module.aut.service.impl.DrivingLicenseService" />
+	<dubbo:service
+		interface="com.memory.platform.module.aut.service.IDrivingLicenseTypeService"
+		ref="drivingLicenseTypeService" />
+	<bean id="drivingLicenseTypeService"
+		class="com.memory.platform.module.aut.service.impl.DrivingLicenseTypeService" />
+	<dubbo:service interface="com.memory.platform.module.aut.service.IIdcardService"
+		ref="idcardService" />
+	<bean id="idcardService"
+		class="com.memory.platform.module.aut.service.impl.IdcardService" />
+	<dubbo:service
+		interface="com.memory.platform.module.capital.service.IBankCardService"
+		ref="bankCardService" />
+	<bean id="bankCardService"
+		class="com.memory.platform.module.capital.service.impl.BankCardService" />
+	<dubbo:service
+		interface="com.memory.platform.module.capital.service.ICapitalAccountService"
+		ref="capitalAccountService" />
+	<bean id="capitalAccountService"
+		class="com.memory.platform.module.capital.service.impl.CapitalAccountService" />
+	<dubbo:service
+		interface="com.memory.platform.module.capital.service.ICashApplicationService"
+		ref="cashApplicationService" />
+	<bean id="cashApplicationService"
+		class="com.memory.platform.module.capital.service.impl.CashApplicationService" />
+	<dubbo:service
+		interface="com.memory.platform.module.capital.service.IMoneyRecordService"
+		ref="moneyRecordService" />
+	<bean id="moneyRecordService"
+		class="com.memory.platform.module.capital.service.impl.MoneyRecordService" />
+	<dubbo:service
+		interface="com.memory.platform.module.capital.service.IPublicBankCardService"
+		ref="publicBankCardService" />
+	<bean id="publicBankCardService"
+		class="com.memory.platform.module.capital.service.impl.PublicBankCardService" />
+	<dubbo:service
+		interface="com.memory.platform.module.capital.service.IRechargeDirectService"
+		ref="rechargeDirectService" />
+	<bean id="rechargeDirectService"
+		class="com.memory.platform.module.capital.service.impl.RechargeDirectService" />
+	<dubbo:service
+		interface="com.memory.platform.module.capital.service.IRechargeRecordService"
+		ref="rechargeRecordService" />
+	<bean id="rechargeRecordService"
+		class="com.memory.platform.module.capital.service.impl.RechargeRecordService">
+		<!-- 微信支付结果回调URL -->
+		<property name="weixinBackUrl"
+			value="http://www.qibogu.com:789/app/capital/weixinpaycallback.do">
+		</property>
+		<!-- 微信SSL证书路径 -->
+		<property name="weiXinCertFolder" value="c://weiXinCert/"/>
+			
+	</bean>
+	<dubbo:service
+		interface="com.memory.platform.module.capital.service.ITradeSequenceService"
+		ref="tradeSequenceService" />
+	<bean id="tradeSequenceService"
+		class="com.memory.platform.module.capital.service.impl.TradeSequenceService" />
+	<dubbo:service
+		interface="com.memory.platform.module.capital.service.ITransferService"
+		ref="transferService" />
+	<bean id="transferService"
+		class="com.memory.platform.module.capital.service.impl.TransferService" />
+	<dubbo:service
+		interface="com.memory.platform.module.capital.service.IUnionPayService"
+		ref="unionPayService" />
+	<bean id="unionPayService"
+		class="com.memory.platform.module.capital.service.impl.UnionPayService" />
+	<dubbo:service
+		interface="com.memory.platform.module.capital.service.IYinLianService"
+		ref="yinLianService" />
+	<bean id="yinLianService"
+		class="com.memory.platform.module.capital.service.impl.YinLianService" />
+	<dubbo:service
+		interface="com.memory.platform.module.goods.service.IContactsService"
+		ref="contactsService" />
+	<bean id="contactsService"
+		class="com.memory.platform.module.goods.service.impl.ContactsService" />
+	<dubbo:service
+		interface="com.memory.platform.module.goods.service.IGoodsAutLogService"
+		ref="goodsAutLogService" />
+	<bean id="goodsAutLogService"
+		class="com.memory.platform.module.goods.service.impl.GoodsAutLogService" />
+	<dubbo:service
+		interface="com.memory.platform.module.goods.service.IGoodsDetailService"
+		ref="goodsDetailService" />
+	<bean id="goodsDetailService"
+		class="com.memory.platform.module.goods.service.impl.GoodsDetailService" />
+	<dubbo:service
+		interface="com.memory.platform.module.goods.service.IGoodsTypeService"
+		ref="goodsTypeService" />
+	<bean id="goodsTypeService"
+		class="com.memory.platform.module.goods.service.impl.GoodsTypeService" />
+	<dubbo:service
+		interface="com.memory.platform.module.order.service.IOrderAutLogService"
+		ref="orderAutLogService" />
+	<bean id="orderAutLogService"
+		class="com.memory.platform.module.order.service.impl.OrderAutLogService" />
+	<dubbo:service
+		interface="com.memory.platform.module.order.service.IOrderSpecialApplyService"
+		ref="orderSpecialApplyService" />
+	<bean id="orderSpecialApplyService"
+		class="com.memory.platform.module.order.service.impl.OrderSpecialApplyService" />
+	<dubbo:service
+		interface="com.memory.platform.module.order.service.IOrderWaybillLogService"
+		ref="orderWaybillLogService" />
+	<bean id="orderWaybillLogService"
+		class="com.memory.platform.module.order.service.impl.OrderWaybillLogService" />
+	<dubbo:service
+		interface="com.memory.platform.module.order.service.IRobOrderConfirmService"
+		ref="robOrderConfirmService" />
+	<bean id="robOrderConfirmService"
+		class="com.memory.platform.module.order.service.impl.RobOrderConfirmService" />
+	<dubbo:service
+		interface="com.memory.platform.module.order.service.IRobOrderConfirmStatisticsService"
+		ref="robOrderConfirmStatisticsService" />
+	<bean id="robOrderConfirmStatisticsService"
+		class="com.memory.platform.module.order.service.impl.RobOrderConfirmStatisticsService" />
+	<dubbo:service
+		interface="com.memory.platform.module.order.service.IRobOrderRecordInfoService"
+		ref="robOrderRecordInfoService" />
+	<bean id="robOrderRecordInfoService"
+		class="com.memory.platform.module.order.service.impl.RobOrderRecordInfoService" />
+	<dubbo:service
+		interface="com.memory.platform.module.order.service.IRobOrderRecordService"
+		ref="robOrderRecordService" />
+	<bean id="robOrderRecordService"
+		class="com.memory.platform.module.order.service.impl.RobOrderRecordService" />
+	<dubbo:service
+		interface="com.memory.platform.module.own.service.IGoodsBasicOwnService"
+		ref="goodsBasicOwnService" />
+	<bean id="goodsBasicOwnService"
+		class="com.memory.platform.module.own.service.impl.GoodsBasicOwnService" />
+	<dubbo:service
+		interface="com.memory.platform.module.own.service.INavigationService"
+		ref="navigationService" />
+	<bean id="navigationService"
+		class="com.memory.platform.module.own.service.impl.NavigationService" />
+	<dubbo:service
+		interface="com.memory.platform.module.own.service.IRobOrderConfirmOwnService"
+		ref="robOrderConfirmOwnService" />
+	<bean id="robOrderConfirmOwnService"
+		class="com.memory.platform.module.own.service.impl.RobOrderConfirmOwnService" />
+	<dubbo:service
+		interface="com.memory.platform.module.own.service.IRobOrderRecordOwnService"
+		ref="robOrderRecordOwnService" />
+	<bean id="robOrderRecordOwnService"
+		class="com.memory.platform.module.own.service.impl.RobOrderRecordOwnService" />
+	<dubbo:service
+		interface="com.memory.platform.module.system.service.IAppUploadService"
+		ref="appUploadService" />
+	<bean id="appUploadService"
+		class="com.memory.platform.module.system.service.impl.AppUploadService" />
+	<dubbo:service interface="com.memory.platform.module.system.service.IBankService"
+		ref="bankService" />
+	<bean id="bankService"
+		class="com.memory.platform.module.system.service.impl.BankService" />
+	<dubbo:service
+		interface="com.memory.platform.module.system.service.ICompanySectionService"
+		ref="companySectionService" />
+	<bean id="companySectionService"
+		class="com.memory.platform.module.system.service.impl.CompanySectionService" />
+	<dubbo:service
+		interface="com.memory.platform.module.system.service.ICompanyService"
+		ref="companyService" />
+	<bean id="companyService"
+		class="com.memory.platform.module.system.service.impl.CompanyService" />
+	<dubbo:service
+		interface="com.memory.platform.module.system.service.ICompanyTypeService"
+		ref="companyTypeService" />
+	<bean id="companyTypeService"
+		class="com.memory.platform.module.system.service.impl.CompanyTypeService" />
+	<dubbo:service
+		interface="com.memory.platform.module.system.service.IFeedbackService"
+		ref="feedbackService" />
+	<bean id="feedbackService"
+		class="com.memory.platform.module.system.service.impl.FeedbackService" />
+	<dubbo:service
+		interface="com.memory.platform.module.system.service.ILgisticsCompaniesService"
+		ref="lgisticsCompaniesService" />
+	<bean id="lgisticsCompaniesService"
+		class="com.memory.platform.module.system.service.impl.LgisticsCompaniesService" />
+	<dubbo:service
+		interface="com.memory.platform.module.system.service.IMenuAppService"
+		ref="menuAppService" />
+	<bean id="menuAppService"
+		class="com.memory.platform.module.system.service.impl.MenuAppService" />
+	<dubbo:service
+		interface="com.memory.platform.module.system.service.IParameterManageService"
+		ref="parameterManageService" />
+	<bean id="parameterManageService"
+		class="com.memory.platform.module.system.service.impl.ParameterManageService" />
+	<dubbo:service
+		interface="com.memory.platform.module.system.service.IPaymentinterfacService"
+		ref="paymentinterfacService" />
+	<bean id="paymentinterfacService"
+		class="com.memory.platform.module.system.service.impl.PaymentinterfacService" />
+	<dubbo:service
+		interface="com.memory.platform.module.system.service.IPersonnelAreaService"
+		ref="personnelAreaService" />
+	<bean id="personnelAreaService"
+		class="com.memory.platform.module.system.service.impl.PersonnelAreaService" />
+	<dubbo:service
+		interface="com.memory.platform.module.system.service.IResourceService"
+		ref="resourceService" />
+	<bean id="resourceService"
+		class="com.memory.platform.module.system.service.impl.ResourceService" />
+	<dubbo:service
+		interface="com.memory.platform.module.system.service.ISendRecordService"
+		ref="sendRecordService" />
+	<bean id="sendRecordService"
+		class="com.memory.platform.module.system.service.impl.SendRecordService" />
+	<dubbo:service
+		interface="com.memory.platform.module.system.service.IStaffService"
+		ref="staffService" />
+	<bean id="staffService"
+		class="com.memory.platform.module.system.service.impl.StaffService" />
+	<dubbo:service
+		interface="com.memory.platform.module.system.service.ITransferTypeService"
+		ref="transferTypeService" />
+	<bean id="transferTypeService"
+		class="com.memory.platform.module.system.service.impl.TransferTypeService" />
+	<dubbo:service
+		interface="com.memory.platform.module.trace.service.IGaoDeWebService"
+		ref="gaoDeWebService" />
+	<bean id="gaoDeWebService"
+		class="com.memory.platform.module.trace.service.impl.GaoDeWebService" />
+	<dubbo:service
+		interface="com.memory.platform.module.truck.service.IAxleTypeService"
+		ref="axleTypeService" />
+	<bean id="axleTypeService"
+		class="com.memory.platform.module.truck.service.impl.AxleTypeService" />
+	<dubbo:service
+		interface="com.memory.platform.module.truck.service.IBearingNumService"
+		ref="bearingNumService" />
+	<bean id="bearingNumService"
+		class="com.memory.platform.module.truck.service.impl.BearingNumService" />
+	<dubbo:service
+		interface="com.memory.platform.module.truck.service.IContainersTypeService"
+		ref="containersTypeService" />
+	<bean id="containersTypeService"
+		class="com.memory.platform.module.truck.service.impl.ContainersTypeService" />
+	<dubbo:service
+		interface="com.memory.platform.module.truck.service.IEngineBrandService"
+		ref="engineBrandService" />
+	<bean id="engineBrandService"
+		class="com.memory.platform.module.truck.service.impl.EngineBrandService" />
+	<dubbo:service
+		interface="com.memory.platform.module.truck.service.ITruckAxleService"
+		ref="truckAxleService" />
+	<bean id="truckAxleService"
+		class="com.memory.platform.module.truck.service.impl.TruckAxleService" />
+	<dubbo:service
+		interface="com.memory.platform.module.truck.service.ITruckBrandService"
+		ref="truckBrandService" />
+	<bean id="truckBrandService"
+		class="com.memory.platform.module.truck.service.impl.TruckBrandService" />
+	<dubbo:service
+		interface="com.memory.platform.module.truck.service.ITruckContainerService"
+		ref="truckContainerService" />
+	<bean id="truckContainerService"
+		class="com.memory.platform.module.truck.service.impl.TruckContainerService" />
+	<dubbo:service
+		interface="com.memory.platform.module.truck.service.ITruckDistributionService"
+		ref="truckDistributionService" />
+	<bean id="truckDistributionService"
+		class="com.memory.platform.module.truck.service.impl.TruckDistributionService" />
+	<dubbo:service
+		interface="com.memory.platform.module.truck.service.ITruckImgService"
+		ref="truckImgService" />
+	<bean id="truckImgService"
+		class="com.memory.platform.module.truck.service.impl.TruckImgService" />
+	<dubbo:service
+		interface="com.memory.platform.module.truck.service.ITruckPlateService"
+		ref="truckPlateService" />
+	<bean id="truckPlateService"
+		class="com.memory.platform.module.truck.service.impl.TruckPlateService" />
+	<dubbo:service interface="com.memory.platform.module.truck.service.ITruckService"
+		ref="truckService" />
+	<bean id="truckService"
+		class="com.memory.platform.module.truck.service.impl.TruckService" />
+	<dubbo:service
+		interface="com.memory.platform.module.truck.service.ITruckTypeService"
+		ref="truckTypeService" />
+	<bean id="truckTypeService"
+		class="com.memory.platform.module.truck.service.impl.TruckTypeService" />
+	<dubbo:service 
+		interface="com.memory.platform.module.push.service.IPushService"
+		ref="pushService" />
+	<bean id="pushService"
+		class="com.memory.platform.module.push.service.impl.PushService" >
+		 <property name="isProduct" value="false" > </property><!--  设置通知发布模式:true 开发模式:false -->
+		</bean>
+	<dubbo:service
+		interface="com.memory.platform.module.goods.service.IGoodsBasicService"
+		ref="GoodsBseicService" />
+	<bean id="GoodsBseicService"
+		class="com.memory.platform.module.goods.service.impl.GoodsBseicService" />
+
+	<dubbo:service
+		interface="com.memory.platform.module.additional.service.IAdditionalExpensesService"
+		ref="additionalExpensesService" />
+	<bean id="additionalExpensesService"
+		class="com.memory.platform.module.additional.service.impl.AdditionalExpensesService" />
+	<dubbo:service
+		interface="com.memory.platform.module.additional.service.IAdditionalExpensesRecordService"
+		ref="additionalExpensesRecordService" />
+	<bean id="additionalExpensesRecordService"
+		class="com.memory.platform.module.additional.service.impl.AdditionalExpensesRecordService" />
+	<dubbo:service
+		interface="com.memory.platform.module.trace.service.IYHTGpsService"
+		ref="yhtGpsService" />
+	<bean id="yhtGpsService"
+		class="com.memory.platform.module.trace.service.impl.YHTGpsService">
+		<!-- <property name="userName" value="15908508970"></property> -->
+		<property name="userName" value="易林物流"></property>
+		<property name="password" value="567890"></property>
+	</bean>
+	<dubbo:service
+		interface="com.memory.platform.module.capital.service.IWeiXinPayCallBackService"
+		ref="WeiXinPayCallBackService" />
+	<bean id="WeiXinPayCallBackService"
+		class="com.memory.platform.module.capital.service.impl.WeiXinPayCallBackService" />
+		
+	<dubbo:service
+		interface="com.memory.platform.module.order.service.IDepositLevelService"
+		ref="depositLevelService" />
+	<bean id="depositLevelService"
+		class="com.memory.platform.module.order.service.impl.DepositLevelService" />
+		
+	<dubbo:service
+		interface="com.memory.platform.module.capital.service.IB2bAccountService"
+		ref="b2bAccountService" />
+	<bean id="b2bAccountService"
+		class="com.memory.platform.module.capital.service.impl.B2bAccountService" />
+</beans>

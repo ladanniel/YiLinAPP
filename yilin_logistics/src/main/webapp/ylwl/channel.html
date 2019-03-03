@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>易林物流小镖人APP下载</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+    <link href="css/bootstrap-reset.css" rel="stylesheet">
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/flexslider.css"/>
+    <link href="assets/bxslider/jquery.bxslider.css" rel="stylesheet" />
+      <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+    <style>
+		html, body {  
+		    margin: 0;
+		    padding: 0;
+		    height: 100%;
+		}
+		
+		body {
+			background: 50% 50% no-repeat #FC3;
+		    font-family: Georgia, Times, serifs;
+		}
+		
+		#floater {
+		    position: relative;
+		    float: left;
+		    height: 50%;
+		    margin-bottom: -200px;
+		    width: 1px;
+		}
+
+		#centered {
+		    position: relative;
+		    clear: left;
+		    height: 400px;
+		    width: 80%;
+		    max-width: 800px;
+		    min-width: 400px;
+		    margin: 0 auto;
+		    background: #fff;
+		    border: 4px solid #666;
+		}
+		
+		#content {
+		    position: absolute;
+		    left: 20%;
+		    right: 20%;
+		    top: 0;
+		    bottom: 0;
+		    overflow: auto;
+		    height: 340px;
+		    padding: 20px;
+		    margin: 10px;
+		}
+		#centered {
+		    -webkit-border-radius: 8px;
+		    -moz-border-radius: 8px;
+		    border-radius: 8px;
+		}
+		
+		h1 {  
+		    font-family: Helvetica, Arial, sans-serif;
+		    color: #f93;
+		    border-bottom: 1px solid #ddd;
+		    letter-spacing: -0.05em;
+		    font-weight: bold;
+		    margin-top: 0;
+		    padding-top: 0;
+		    font-size:34px;
+		}
+		p{  
+		    line-height: 1.6em;
+		    font-size:24px;
+		}
+		*{
+			margin:0; padding:0;
+		}
+		a{
+			text-decoration: none;
+		}
+		img{
+			max-width: 100%; height: auto;
+		}
+		.weixin-tip{
+			display: none;
+			position: fixed;
+			left:0; top:0;
+			bottom:0;
+			background: rgba(0,0,0,0.8);
+			filter:alpha(opacity=80);
+			height: 100%;
+			width: 100%;
+			z-index: 100;
+		}
+		.weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}
+	</style>
+</head>
+<body>
+	<div class="weixin-tip">
+		<p>
+			<img src="img/live_weixin.png" alt="微信打开"/>
+		</p>
+	</div>
+	<div id="floater"></div>
+    <div id="centered">
+        <div id="content">
+            <h1>易林物流小镖人App</h1>
+            <div style="margin-top:10px;">
+				<button id="btnDriver" class="btn btn-danger" style="width:200px;font-size:24px;">下载司机端</button>
+				<button id="btnOwner" class="btn btn-danger" style="width:200px;font-size:24px;">下载货主端</button>
+			</div>
+            <p style="margin-top:10px;">欢迎使用齐帛谷小镖人app，根据你的需求下载属于你的小镖人app,祝你使用愉快。</p>
+        </div>
+
+    </div>
+    
+    <script src="js/jquery-1.8.1.min.js"></script>
+    <script type="text/javascript">
+        // 获取终端的相关信息
+        var Terminal = {
+            // 辨别移动终端类型
+            platform : function(){
+                var u = navigator.userAgent, app = navigator.appVersion;
+                return {
+                    // android终端或者uc浏览器
+                    android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
+                    // 是否为iPhone或者QQHD浏览器
+                    iPhone: u.indexOf('iPhone') > -1 ,
+                    // 是否iPad
+                    iPad: u.indexOf('iPad') > -1
+                };
+            }(),
+            // 辨别移动终端的语言：zh-cn、en-us、ko-kr、ja-jp...
+            language : (navigator.browserLanguage || navigator.language).toLowerCase()
+        }
+        
+        $(window).on("load",function(){
+	        var winHeight = $(window).height();
+			function is_weixin() {
+			    var ua = navigator.userAgent.toLowerCase();
+			    if (ua.match(/MicroMessenger/i) == "micromessenger") {
+			        return true;
+			    } else {
+			        return false;
+			    }
+			}
+			var isWeixin = is_weixin();
+			if(isWeixin && Terminal.platform.android){
+				$(".weixin-tip").css("height",winHeight);
+	            $(".weixin-tip").show();
+			}
+        })
+        
+        $('#btnDriver').click(function(){
+        	choseHref("driver");
+        });
+        
+        $('#btnOwner').click(function(){
+        	choseHref("owner");
+        });
+        
+        function choseHref(client){
+        	// 根据不同的终端，跳转到不同的地址
+        	var url = "http://www.qibogu.com/yilin_logistics";
+        	if(Terminal.platform.android){
+        		if(client == "driver"){
+        			url = "http://www.qibogu.com/yilin_logistics/download/driverApp.apk";
+        		}
+        		else if(client == "owner"){
+        			url = "http://www.qibogu.com/yilin_logistics/download/ownerApp.apk";
+        		}
+        	}else if(Terminal.platform.iPhone){
+        		alert("iPhone")
+        		url = url;
+        	}else if(Terminal.platform.iPad){
+        		// 还可以通过language，区分开多国语言版
+                switch(Terminal.language){
+                    case 'en-us':
+                    	url = url;
+                        break;
+                    case 'ko-kr':
+                    	url = url;
+                        break;
+                    case 'ja-jp':
+                    	url = url;
+                        break;
+                    default:
+                    	url = url;
+                }
+        	}
+        	location.href = url;
+        }
+    </script>
+</body>

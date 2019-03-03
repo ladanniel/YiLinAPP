@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="1" failures="0" name="yilin_logistics.TestYingLian" time="5.233" errors="1" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_121\jre\bin"/>
+    <property name="java.vm.version" value="25.121-b13"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="E:\code\java\workspaces\web\qbgwl_new_web\yilin_logistics"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="E:\code\java\workspaces\web\qbgwl_new_web\yilin_logistics"/>
+    <property name="java.runtime.version" value="1.8.0_121-b13"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_121\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\ROG\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="classworlds.conf" value="C:\Users\ROG\Desktop\splitProject\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf7048188311999027736.tmp"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_121\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files\Java\jdk1.8.0_121\jre\bin;C:/Program Files/Java/jre1.8.0_121/bin/server;C:/Program Files/Java/jre1.8.0_121/bin;C:/Program Files/Java/jre1.8.0_121/lib/amd64;C:\Python27\;C:\Python27\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_121\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;D:\tools\SVN\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;D:\tools\AndroidSDK\android-sdk\tools;D:\tools\AndroidSDK\android-sdk\platform-tools;C:\Users\ROG\AppData\Roaming\npm;C:\Users\ROG\Desktop;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\ROG"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="user.name" value="ROG"/>
+    <property name="java.class.path" value="E:\code\java\freamwork\apache-maven-3.3.3\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_121\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B -gs E:\code\java\freamwork\apache-maven-3.3.3\conf\settings.xml -s E:\code\java\freamwork\apache-maven-3.3.3\conf\settings.xml install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_121"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext;C:\windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_121\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_121\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="E:\code\java\freamwork\apache-maven-3.3.3"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="yilin_logistics.TestYingLian" name="QRCode" time="5.233">
+    <error message="jp/sourceforge/qrcode/exception/DecodingFailedException" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: jp/sourceforge/qrcode/exception/DecodingFailedException
+	at yilin_logistics.TestYingLian.QRCode(TestYingLian.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.ClassNotFoundException: jp.sourceforge.qrcode.exception.DecodingFailedException
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 35 more
+</error>
+    <system-out> INFO [main] - Loading XML bean definitions from class path resource [application.xml]
+Loading XML bean definitions from class path resource [application.xml]
+ INFO [main] - Refreshing org.springframework.context.support.GenericApplicationContext@3c0f93f1: startup date [Thu Jul 06 15:48:58 CST 2017]; root of context hierarchy
+Refreshing org.springframework.context.support.GenericApplicationContext@3c0f93f1: startup date [Thu Jul 06 15:48:58 CST 2017]; root of context hierarchy
+ INFO [main] - Loading properties file from class path resource [jdbc.properties]
+Loading properties file from class path resource [jdbc.properties]
+ INFO [main] - Initializing EhCache CacheManager
+Initializing EhCache CacheManager
+ INFO [main] - {dataSource-1} inited
+{dataSource-1} inited
+ INFO [main] - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+ INFO [main] - HHH000412: Hibernate Core {4.3.8.Final}
+HHH000412: Hibernate Core {4.3.8.Final}
+ INFO [main] - HHH000206: hibernate.properties not found
+HHH000206: hibernate.properties not found
+ INFO [main] - HHH000021: Bytecode provider name : javassist
+HHH000021: Bytecode provider name : javassist
+ INFO [main] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+ INFO [main] - HHH000399: Using default transaction strategy (direct JDBC transactions)
+HHH000399: Using default transaction strategy (direct JDBC transactions)
+ INFO [main] - HHH000397: Using ASTQueryTranslatorFactory
+HHH000397: Using ASTQueryTranslatorFactory
+ INFO [main] - HHH000250: Starting update timestamps cache at region: org.hibernate.cache.spi.UpdateTimestampsCache
+HHH000250: Starting update timestamps cache at region: org.hibernate.cache.spi.UpdateTimestampsCache
+ WARN [main] - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+ INFO [main] - HHH000248: Starting query cache at region: org.hibernate.cache.internal.StandardQueryCache
+HHH000248: Starting query cache at region: org.hibernate.cache.internal.StandardQueryCache
+ WARN [main] - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+ WARN [main] - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+ INFO [main] - HHH000228: Running hbm2ddl schema update
+HHH000228: Running hbm2ddl schema update
+ INFO [main] - HHH000102: Fetching database metadata
+HHH000102: Fetching database metadata
+ INFO [main] - HHH000396: Updating schema
+HHH000396: Updating schema
+ INFO [main] - HHH000261: Table found: ylwl_db.aut_business_license
+HHH000261: Table found: ylwl_db.aut_business_license
+ INFO [main] - HHH000037: Columns: [update_time, account_id, create_time, update_user_id, company_validity_date, company_img, name, company_no, id, add_user_id, company_address, company_create_date]
+HHH000037: Columns: [update_time, account_id, create_time, update_user_id, company_validity_date, company_img, name, company_no, id, add_user_id, company_address, company_create_date]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.aut_driving_license
+HHH000261: Table found: ylwl_db.aut_driving_license
+ INFO [main] - HHH000037: Columns: [birthday, address, company_id, create_time, driving_license_img, sex, valid_start_date, add_user_id, persion_img, valid_year, valid_end_date, update_time, driving_license_no, account_id, update_user_id, company_img, name, driving_license_type_id, id]
+HHH000037: Columns: [birthday, address, company_id, create_time, driving_license_img, sex, valid_start_date, add_user_id, persion_img, valid_year, valid_end_date, update_time, driving_license_no, account_id, update_user_id, company_img, name, driving_license_type_id, id]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.aut_idcard
+HHH000261: Table found: ylwl_db.aut_idcard
+ INFO [main] - HHH000037: Columns: [idcard_front_img, idcard_persoin_img, update_time, account_id, company_id, create_time, update_user_id, idcard_back_img, name, id, add_user_id, idcard_no]
+HHH000037: Columns: [idcard_front_img, idcard_persoin_img, update_time, account_id, company_id, create_time, update_user_id, idcard_back_img, name, id, add_user_id, idcard_no]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.bas_area
+HHH000261: Table found: ylwl_db.bas_area
+ INFO [main] - HHH000037: Columns: [full_name, pinyin, lng, parent_id, name, short_name, id, level_type, lat]
+HHH000037: Columns: [full_name, pinyin, lng, parent_id, name, short_name, id, level_type, lat]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.bas_axle_type
+HHH000261: Table found: ylwl_db.bas_axle_type
+ INFO [main] - HHH000037: Columns: [update_time, create_time, update_user_id, first_letter, name, updata_user_id, exp3, exp2, id, exp1, add_user_id]
+HHH000037: Columns: [update_time, create_time, update_user_id, first_letter, name, updata_user_id, exp3, exp2, id, exp1, add_user_id]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.bas_bearing_num
+HHH000261: Table found: ylwl_db.bas_bearing_num
+ INFO [main] - HHH000037: Columns: [update_time, create_time, update_user_id, name, id, add_user_id]
+HHH000037: Columns: [update_time, create_time, update_user_id, name, id, add_user_id]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.bas_containers_type
+HHH000261: Table found: ylwl_db.bas_containers_type
+ INFO [main] - HHH000037: Columns: [update_time, create_time, update_user_id, name, id, add_user_id]
+HHH000037: Columns: [update_time, create_time, update_user_id, name, id, add_user_id]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.bas_driving_license_type
+HHH000261: Table found: ylwl_db.bas_driving_license_type
+ INFO [main] - HHH000037: Columns: [no, update_time, create_time, update_user_id, updata_user_id, exp3, exp2, id, exp1, add_user_id, desc]
+HHH000037: Columns: [no, update_time, create_time, update_user_id, updata_user_id, exp3, exp2, id, exp1, add_user_id, desc]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.bas_education
+HHH000261: Table found: ylwl_db.bas_education
+ INFO [main] - HHH000037: Columns: [update_time, create_time, update_user_id, name, id, add_user_id]
+HHH000037: Columns: [update_time, create_time, update_user_id, name, id, add_user_id]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.bas_engine_brand
+HHH000261: Table found: ylwl_db.bas_engine_brand
+ INFO [main] - HHH000037: Columns: [update_time, create_time, update_user_id, first_letter, name, updata_user_id, exp3, exp2, id, exp1, add_user_id]
+HHH000037: Columns: [update_time, create_time, update_user_id, first_letter, name, updata_user_id, exp3, exp2, id, exp1, add_user_id]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.bas_truck_brand
+HHH000261: Table found: ylwl_db.bas_truck_brand
+ INFO [main] - HHH000037: Columns: [update_time, create_time, update_user_id, first_letter, name, updata_user_id, id, add_user_id]
+HHH000037: Columns: [update_time, create_time, update_user_id, first_letter, name, updata_user_id, id, add_user_id]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.bas_truck_plate
+HHH000261: Table found: ylwl_db.bas_truck_plate
+ INFO [main] - HHH000037: Columns: [update_time, create_time, update_user_id, name, id, add_user_id]
+HHH000037: Columns: [update_time, create_time, update_user_id, name, id, add_user_id]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.bas_truck_type
+HHH000261: Table found: ylwl_db.bas_truck_type
+ INFO [main] - HHH000037: Columns: [update_time, create_time, update_user_id, name, updata_user_id, exp3, exp2, id, exp1, add_user_id]
+HHH000037: Columns: [update_time, create_time, update_user_id, name, updata_user_id, exp3, exp2, id, exp1, add_user_id]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.goods_aut_log
+HHH000261: Table found: ylwl_db.goods_aut_log
+ INFO [main] - HHH000037: Columns: [update_time, create_time, update_user_id, beforestatus, afterstatus, audit_person_id, audit_person, remark, id, goods_basic_id, add_user_id, title]
+HHH000037: Columns: [update_time, create_time, update_user_id, beforestatus, afterstatus, audit_person_id, audit_person, remark, id, goods_basic_id, add_user_id, title]
+ INFO [main] - HHH000108: Foreign keys: [goods_aut_log_ibfk_1]
+HHH000108: Foreign keys: [goods_aut_log_ibfk_1]
+ INFO [main] - HHH000126: Indexes: [fk_1gi9523wh46mxrf7l6g9b5fv1, primary]
+HHH000126: Indexes: [fk_1gi9523wh46mxrf7l6g9b5fv1, primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.goods_basic
+HHH000261: Table found: ylwl_db.goods_basic
+ INFO [main] - HHH000037: Columns: [delivery_address, finite_time, consignee_coordinate, delivery_name, consignee_name, remark, consignee_area_id, total_weight, audit_time, haslock, update_time, delivery_mobile, update_user_id, consignee_email, delivery_area_id, audit_cause, delivery_area_name, id, goods_type_id, release_time, consignee_address, on_line, consignee_area_name, company_id, create_time, total_price, delivery_coordinate, is_long_time, audit_person_id, add_user_id, unit_price, delivery_no, version, account_id, stock_type_names, delivery_email, auditperson, consignee_mobile, company_name, embark_weight, map_kilometer, stocktypes, status]
+HHH000037: Columns: [delivery_address, finite_time, consignee_coordinate, delivery_name, consignee_name, remark, consignee_area_id, total_weight, audit_time, haslock, update_time, delivery_mobile, update_user_id, consignee_email, delivery_area_id, audit_cause, delivery_area_name, id, goods_type_id, release_time, consignee_address, on_line, consignee_area_name, company_id, create_time, total_price, delivery_coordinate, is_long_time, audit_person_id, add_user_id, unit_price, delivery_no, version, account_id, stock_type_names, delivery_email, auditperson, consignee_mobile, company_name, embark_weight, map_kilometer, stocktypes, status]
+ INFO [main] - HHH000108: Foreign keys: [goods_basic_ibfk_2, goods_basic_ibfk_1]
+HHH000108: Foreign keys: [goods_basic_ibfk_2, goods_basic_ibfk_1]
+ INFO [main] - HHH000126: Indexes: [fk_kvxj62tdksainkhcedoqyu6od, fk_stum3mc729txlcy57rtq8yrhf, primary]
+HHH000126: Indexes: [fk_kvxj62tdksainkhcedoqyu6od, fk_stum3mc729txlcy57rtq8yrhf, primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.goods_basic_stock_type
+HHH000261: Table found: ylwl_db.goods_basic_stock_type
+ INFO [main] - HHH000037: Columns: [goods_basic_id, stock_type_id, id]
+HHH000037: Columns: [goods_basic_id, stock_type_id, id]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [goods_basic_id, stock_type_id, primary]
+HHH000126: Indexes: [goods_basic_id, stock_type_id, primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.goods_contacts
+HHH000261: Table found: ylwl_db.goods_contacts
+ INFO [main] - HHH000037: Columns: [address, create_time, company_id, mobile, contactstype, add_user_id, area_id, point, ypoint, update_time, unit, account_id, update_user_id, areafullname, name, id, xpoint, email]
+HHH000037: Columns: [address, create_time, company_id, mobile, contactstype, add_user_id, area_id, point, ypoint, update_time, unit, account_id, update_user_id, areafullname, name, id, xpoint, email]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.goods_detail
+HHH000261: Table found: ylwl_db.goods_detail
+ INFO [main] - HHH000037: Columns: [wing_width, goods_name, create_time, length, weight, add_user_id, version, specifica, update_time, update_user_id, diameter, embark_weight, id, goods_type_id, goods_baice_id, height]
+HHH000037: Columns: [wing_width, goods_name, create_time, length, weight, add_user_id, version, specifica, update_time, update_user_id, diameter, embark_weight, id, goods_type_id, goods_baice_id, height]
+ INFO [main] - HHH000108: Foreign keys: [goods_detail_ibfk_2, goods_detail_ibfk_1]
+HHH000108: Foreign keys: [goods_detail_ibfk_2, goods_detail_ibfk_1]
+ INFO [main] - HHH000126: Indexes: [fk_59isvq2ko7x4o4j53rabwq1le, fk_sn74nyipsrgq9mowq0ggx6pet, primary]
+HHH000126: Indexes: [fk_59isvq2ko7x4o4j53rabwq1le, fk_sn74nyipsrgq9mowq0ggx6pet, primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.goods_type
+HHH000261: Table found: ylwl_db.goods_type
+ INFO [main] - HHH000037: Columns: [update_time, descs, create_time, update_user_id, level, prent_id, name, id, add_user_id]
+HHH000037: Columns: [update_time, descs, create_time, update_user_id, level, prent_id, name, id, add_user_id]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.mem_account
+HHH000261: Table found: ylwl_db.mem_account
+ INFO [main] - HHH000037: Columns: [aut_time, last_login_time, paypassword, failed_msg, company_section_id, aut_supplement_type, login_count, password, update_time, update_user_id, role_id, aut_user_id, id, authentication, company_id, idcard_id, create_time, usertype, avatar, add_user_id, login_ip, token, capitalstatus, acc_phone, phone, driving_license_id, name, account, status]
+HHH000037: Columns: [aut_time, last_login_time, paypassword, failed_msg, company_section_id, aut_supplement_type, login_count, password, update_time, update_user_id, role_id, aut_user_id, id, authentication, company_id, idcard_id, create_time, usertype, avatar, add_user_id, login_ip, token, capitalstatus, acc_phone, phone, driving_license_id, name, account, status]
+ INFO [main] - HHH000108: Foreign keys: [mem_account_ibfk_2, mem_account_ibfk_1, mem_account_ibfk_3]
+HHH000108: Foreign keys: [mem_account_ibfk_2, mem_account_ibfk_1, mem_account_ibfk_3]
+ INFO [main] - HHH000126: Indexes: [fk_l3aivnrfikd7ob14gmvww7j6v, fk_rsuasxj0laxfxjn3vl4t0pxdl, primary, fk_fo07w0evgqpqxp09nj8mxr72h]
+HHH000126: Indexes: [fk_l3aivnrfikd7ob14gmvww7j6v, fk_rsuasxj0laxfxjn3vl4t0pxdl, primary, fk_fo07w0evgqpqxp09nj8mxr72h]
+ INFO [main] - HHH000261: Table found: ylwl_db.mem_bank_card
+HHH000261: Table found: ylwl_db.mem_bank_card
+ INFO [main] - HHH000037: Columns: [image, bank_card, markimage, orderno, create_time, bank_type, mobile, updata_user_id, add_user_id, version, bandstatus, update_time, account_id, open_bank, cn_name, update_user_id, bank_name, id, account]
+HHH000037: Columns: [image, bank_card, markimage, orderno, create_time, bank_type, mobile, updata_user_id, add_user_id, version, bandstatus, update_time, account_id, open_bank, cn_name, update_user_id, bank_name, id, account]
+ INFO [main] - HHH000108: Foreign keys: [mem_bank_card_ibfk_1]
+HHH000108: Foreign keys: [mem_bank_card_ibfk_1]
+ INFO [main] - HHH000126: Indexes: [fk_534clyubaiu2fn4buras3ui6f, primary]
+HHH000126: Indexes: [fk_534clyubaiu2fn4buras3ui6f, primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.mem_capital_account
+HHH000261: Table found: ylwl_db.mem_capital_account
+ INFO [main] - HHH000037: Columns: [totalrecharge, create_time, frozen, totalcash, updata_user_id, add_user_id, version, total, update_time, account_id, update_user_id, id, avaiable, account]
+HHH000037: Columns: [totalrecharge, create_time, frozen, totalcash, updata_user_id, add_user_id, version, total, update_time, account_id, update_user_id, id, avaiable, account]
+ INFO [main] - HHH000108: Foreign keys: [mem_capital_account_ibfk_1]
+HHH000108: Foreign keys: [mem_capital_account_ibfk_1]
+ INFO [main] - HHH000126: Indexes: [fk_3epcocwa4spjf63oo9b92xon3, primary]
+HHH000126: Indexes: [fk_3epcocwa4spjf63oo9b92xon3, primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.mem_cashapplication
+HHH000261: Table found: ylwl_db.mem_cashapplication
+ INFO [main] - HHH000037: Columns: [create_time, tradeno, actualmoney, updata_user_id, remark, add_user_id, version, update_time, account_id, money, update_user_id, user_id, openbank, id, bankcard, bankname, verifytpeopson, verifytime, account, status]
+HHH000037: Columns: [create_time, tradeno, actualmoney, updata_user_id, remark, add_user_id, version, update_time, account_id, money, update_user_id, user_id, openbank, id, bankcard, bankname, verifytpeopson, verifytime, account, status]
+ INFO [main] - HHH000108: Foreign keys: [mem_cashapplication_ibfk_1]
+HHH000108: Foreign keys: [mem_cashapplication_ibfk_1]
+ INFO [main] - HHH000126: Indexes: [fk_dsag4v7vimmtxy7a8da6oasd6, primary]
+HHH000126: Indexes: [fk_dsag4v7vimmtxy7a8da6oasd6, primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.mem_money_record
+HHH000261: Table found: ylwl_db.mem_money_record
+ INFO [main] - HHH000037: Columns: [create_time, trade_account, updata_user_id, remark, source_account, source_type, type, add_user_id, version, operator, trade_name, update_time, account_id, money, update_user_id, id]
+HHH000037: Columns: [create_time, trade_account, updata_user_id, remark, source_account, source_type, type, add_user_id, version, operator, trade_name, update_time, account_id, money, update_user_id, id]
+ INFO [main] - HHH000108: Foreign keys: [mem_money_record_ibfk_1]
+HHH000108: Foreign keys: [mem_money_record_ibfk_1]
+ INFO [main] - HHH000126: Indexes: [fk_isia8pnx3il8d8ibrbhnjtcsk, fk_7skfb263tc8svlsm0j6e0wr2w, primary]
+HHH000126: Indexes: [fk_isia8pnx3il8d8ibrbhnjtcsk, fk_7skfb263tc8svlsm0j6e0wr2w, primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.mem_recharge_direct
+HHH000261: Table found: ylwl_db.mem_recharge_direct
+ INFO [main] - HHH000037: Columns: [response_data, create_time, remark, add_user_id, update_time, account_id, money, update_user_id, txn_time, trade_no, id, order_id, status]
+HHH000037: Columns: [response_data, create_time, remark, add_user_id, update_time, account_id, money, update_user_id, txn_time, trade_no, id, order_id, status]
+ INFO [main] - HHH000108: Foreign keys: [fk_l0uuoejc7pf8to0r9yq0syt3s]
+HHH000108: Foreign keys: [fk_l0uuoejc7pf8to0r9yq0syt3s]
+ INFO [main] - HHH000126: Indexes: [primary, fk_l0uuoejc7pf8to0r9yq0syt3s]
+HHH000126: Indexes: [primary, fk_l0uuoejc7pf8to0r9yq0syt3s]
+ INFO [main] - HHH000261: Table found: ylwl_db.mem_recharge_record
+HHH000261: Table found: ylwl_db.mem_recharge_record
+ INFO [main] - HHH000037: Columns: [paymentinterface_id, create_time, query_id, trade_account, updata_user_id, remark, source_account, source_type, add_user_id, trade_name, update_time, account_id, money, update_user_id, trade_no, id, bankname, account, status]
+HHH000037: Columns: [paymentinterface_id, create_time, query_id, trade_account, updata_user_id, remark, source_account, source_type, add_user_id, trade_name, update_time, account_id, money, update_user_id, trade_no, id, bankname, account, status]
+ INFO [main] - HHH000108: Foreign keys: [mem_recharge_record_ibfk_2, mem_recharge_record_ibfk_1]
+HHH000108: Foreign keys: [mem_recharge_record_ibfk_2, mem_recharge_record_ibfk_1]
+ INFO [main] - HHH000126: Indexes: [fk_5xtgb3tprfamhjje7qjflcl4u, primary, fk_3w17vmyekmb03u3owdk4kofaa]
+HHH000126: Indexes: [fk_5xtgb3tprfamhjje7qjflcl4u, primary, fk_3w17vmyekmb03u3owdk4kofaa]
+ INFO [main] - HHH000261: Table found: ylwl_db.mem_staff
+HHH000261: Table found: ylwl_db.mem_staff
+ INFO [main] - HHH000037: Columns: [birthday, create_time, nation, sex, origin, education_id, add_user_id, company_section_id, graduate_school, update_time, account_id, major, update_user_id, name, id, age, email]
+HHH000037: Columns: [birthday, create_time, nation, sex, origin, education_id, add_user_id, company_section_id, graduate_school, update_time, account_id, major, update_user_id, name, id, age, email]
+ INFO [main] - HHH000108: Foreign keys: [mem_staff_ibfk_2, mem_staff_ibfk_1]
+HHH000108: Foreign keys: [mem_staff_ibfk_2, mem_staff_ibfk_1]
+ INFO [main] - HHH000126: Indexes: [fk_c3vpaq27ipgi06yi55sfw4s44, fk_r4koedsljq9mmoyr950s6c0an, primary]
+HHH000126: Indexes: [fk_c3vpaq27ipgi06yi55sfw4s44, fk_r4koedsljq9mmoyr950s6c0an, primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.mem_trade_sequence
+HHH000261: Table found: ylwl_db.mem_trade_sequence
+ INFO [main] - HHH000037: Columns: [create_time, has_recharge, has_cash, source_account, source_type, add_user_id, version, update_time, account_id, update_user_id, id, source_id, has_transfer, sequence_no]
+HHH000037: Columns: [create_time, has_recharge, has_cash, source_account, source_type, add_user_id, version, update_time, account_id, update_user_id, id, source_id, has_transfer, sequence_no]
+ INFO [main] - HHH000108: Foreign keys: [mem_trade_sequence_ibfk_1]
+HHH000108: Foreign keys: [mem_trade_sequence_ibfk_1]
+ INFO [main] - HHH000126: Indexes: [fk_5njy51bx8ltqoi9rwxupmerk2, primary]
+HHH000126: Indexes: [fk_5njy51bx8ltqoi9rwxupmerk2, primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.mem_transfer
+HHH000261: Table found: ylwl_db.mem_transfer
+ INFO [main] - HHH000037: Columns: [create_time, type_id, trade_account, remark, source_account, source_type, add_user_id, version, toaccount_id, trade_name, update_time, account_id, update_user_id, money, trade_no, id, status]
+HHH000037: Columns: [create_time, type_id, trade_account, remark, source_account, source_type, add_user_id, version, toaccount_id, trade_name, update_time, account_id, update_user_id, money, trade_no, id, status]
+ INFO [main] - HHH000108: Foreign keys: [mem_transfer_ibfk_1, mem_transfer_ibfk_2, mem_transfer_ibfk_3]
+HHH000108: Foreign keys: [mem_transfer_ibfk_1, mem_transfer_ibfk_2, mem_transfer_ibfk_3]
+ INFO [main] - HHH000126: Indexes: [fk_bt9qvq68j12oaou57jwf1rosu, fk_jll28w6hx3jwvs2belpydkyof, primary, fk_42ct8ni1ekncb64mvgibrakn2]
+HHH000126: Indexes: [fk_bt9qvq68j12oaou57jwf1rosu, fk_jll28w6hx3jwvs2belpydkyof, primary, fk_42ct8ni1ekncb64mvgibrakn2]
+ INFO [main] - HHH000261: Table found: ylwl_db.order_aut_log
+HHH000261: Table found: ylwl_db.order_aut_log
+ INFO [main] - HHH000037: Columns: [special_type, create_time, beforestatus, receipt_img, audit_person_id, confirm_receipt_user_id, audit_person, remark, add_user_id, title, rob_orderconfirm_id, rocessing_result, confirm_status, turck_id, update_time, update_user_id, afterstatus, id, rob_order_record_id, receipt_user_id, turck_user_id, special_status]
+HHH000037: Columns: [special_type, create_time, beforestatus, receipt_img, audit_person_id, confirm_receipt_user_id, audit_person, remark, add_user_id, title, rob_orderconfirm_id, rocessing_result, confirm_status, turck_id, update_time, update_user_id, afterstatus, id, rob_order_record_id, receipt_user_id, turck_user_id, special_status]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [fk_cj7fl3jiq22jf82ikev0uuh3d, primary]
+HHH000126: Indexes: [fk_cj7fl3jiq22jf82ikev0uuh3d, primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.order_special_apply
+HHH000261: Table found: ylwl_db.order_special_apply
+ INFO [main] - HHH000037: Columns: [special_type, emergency_img, create_time, dealt_person_id, indemnity, remark, add_user_id, rocessing_result, rob_orderconfirm_id, confirm_status, bearbitration_company_id, apply_company_id, apply_person_id, update_time, apply_person_name, update_user_id, id, special_status, be_arbitration_person_id]
+HHH000037: Columns: [special_type, emergency_img, create_time, dealt_person_id, indemnity, remark, add_user_id, rocessing_result, rob_orderconfirm_id, confirm_status, bearbitration_company_id, apply_company_id, apply_person_id, update_time, apply_person_name, update_user_id, id, special_status, be_arbitration_person_id]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.order_waybill_log
+HHH000261: Table found: ylwl_db.order_waybill_log
+ INFO [main] - HHH000037: Columns: [special_type, create_time, dealt_person_id, indemnity, remark, add_user_id, rob_orderconfirm_id, rocessing_result, confirm_status, apply_company_id, apply_person_id, update_time, apply_person_name, update_user_id, order_special_apply_id, dealt_person_name, id, rob_order_record_id, special_status]
+HHH000037: Columns: [special_type, create_time, dealt_person_id, indemnity, remark, add_user_id, rob_orderconfirm_id, rocessing_result, confirm_status, apply_company_id, apply_person_id, update_time, apply_person_name, update_user_id, order_special_apply_id, dealt_person_name, id, rob_order_record_id, special_status]
+ INFO [main] - HHH000108: Foreign keys: [fk_7fx4y4iih8wgb90nufroqdt2h, fk_cu4tmr07q0v55fjdwy8isndg9]
+HHH000108: Foreign keys: [fk_7fx4y4iih8wgb90nufroqdt2h, fk_cu4tmr07q0v55fjdwy8isndg9]
+ INFO [main] - HHH000126: Indexes: [fk_7fx4y4iih8wgb90nufroqdt2h, primary, fk_cu4tmr07q0v55fjdwy8isndg9]
+HHH000126: Indexes: [fk_7fx4y4iih8wgb90nufroqdt2h, primary, fk_cu4tmr07q0v55fjdwy8isndg9]
+ INFO [main] - HHH000261: Table found: ylwl_db.rob_order_confirm
+HHH000261: Table found: ylwl_db.rob_order_confirm
+ INFO [main] - HHH000037: Columns: [original_receipt_img, receipt_img, turck_deposit, indemnity, actualtransportation_cost, transport_no, turck_id, total_weight, turck_cost, update_time, update_user_id, rob_order_no, lgistics_code, id, end_data, special_type, lock_status, create_time, lgistics_num, unit_price, add_user_id, rocessing_result, actual_weight, confirm_data, account_id, transportation_deposit, turck_user_id, lgistics_name, special_status, transportation_cost, rob_order_id, status]
+HHH000037: Columns: [original_receipt_img, receipt_img, turck_deposit, indemnity, actualtransportation_cost, transport_no, turck_id, total_weight, turck_cost, update_time, update_user_id, rob_order_no, lgistics_code, id, end_data, special_type, lock_status, create_time, lgistics_num, unit_price, add_user_id, rocessing_result, actual_weight, confirm_data, account_id, transportation_deposit, turck_user_id, lgistics_name, special_status, transportation_cost, rob_order_id, status]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.rob_order_record
+HHH000261: Table found: ylwl_db.rob_order_record
+ INFO [main] - HHH000037: Columns: [cancel_remark, audit_person, remark, audit_time, update_time, update_user_id, rob_order_no, actualweight, robbed_company_id, cancel_date, cancel_user_id, id, deposit_unit_price, goods_baice_id, create_time, total_price, audit_person_id, weight, add_user_id, robbed_account_id, unit_price, version, goods_types, account_id, companyname, status]
+HHH000037: Columns: [cancel_remark, audit_person, remark, audit_time, update_time, update_user_id, rob_order_no, actualweight, robbed_company_id, cancel_date, cancel_user_id, id, deposit_unit_price, goods_baice_id, create_time, total_price, audit_person_id, weight, add_user_id, robbed_account_id, unit_price, version, goods_types, account_id, companyname, status]
+ INFO [main] - HHH000108: Foreign keys: [rob_order_record_ibfk_1, rob_order_record_ibfk_3, rob_order_record_ibfk_2]
+HHH000108: Foreign keys: [rob_order_record_ibfk_1, rob_order_record_ibfk_3, rob_order_record_ibfk_2]
+ INFO [main] - HHH000126: Indexes: [fk_jxxpb4ju1u4srhqpohr72ok8u, fk_8osrlyhd5hbux27cd7dxct5ra, fk_coh5caxlul1klbvmmq14rni96, primary]
+HHH000126: Indexes: [fk_jxxpb4ju1u4srhqpohr72ok8u, fk_8osrlyhd5hbux27cd7dxct5ra, fk_coh5caxlul1klbvmmq14rni96, primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.rob_order_record_info
+HHH000261: Table found: ylwl_db.rob_order_record_info
+ INFO [main] - HHH000037: Columns: [create_time, is_split, goods_detail_id, weight, add_user_id, is_parent, stock_id, version, original_weight, actual_weight, update_time, update_user_id, parent_id, id, rob_order_record_id]
+HHH000037: Columns: [create_time, is_split, goods_detail_id, weight, add_user_id, is_parent, stock_id, version, original_weight, actual_weight, update_time, update_user_id, parent_id, id, rob_order_record_id]
+ INFO [main] - HHH000108: Foreign keys: [rob_order_record_info_ibfk_1, rob_order_record_info_ibfk_2]
+HHH000108: Foreign keys: [rob_order_record_info_ibfk_1, rob_order_record_info_ibfk_2]
+ INFO [main] - HHH000126: Indexes: [fk_7pkwpu7doksn95qxs0ahmtoe1, fk_8b9gvtlujsk51mw9uaw81n87g, primary]
+HHH000126: Indexes: [fk_7pkwpu7doksn95qxs0ahmtoe1, fk_8b9gvtlujsk51mw9uaw81n87g, primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.sys_appupload
+HHH000261: Table found: ylwl_db.sys_appupload
+ INFO [main] - HHH000037: Columns: [path, update_time, create_time, update_user_id, id, add_user_id, versioncode, versionname, version, content]
+HHH000037: Columns: [path, update_time, create_time, update_user_id, id, add_user_id, versioncode, versionname, version, content]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.sys_bank
+HHH000261: Table found: ylwl_db.sys_bank
+ INFO [main] - HHH000037: Columns: [image, update_time, markimage, create_time, update_user_id, cnname, id, add_user_id, shortname]
+HHH000037: Columns: [image, update_time, markimage, create_time, update_user_id, cnname, id, add_user_id, shortname]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.sys_company
+HHH000261: Table found: ylwl_db.sys_company
+ INFO [main] - HHH000037: Columns: [area_full_name, contact_name, aut_time, address, idcard_id, create_time, contact_tel, failed_msg, source, area_id, add_user_id, aut_supplement_type, business_license_id, update_time, account_id, update_user_id, company_type_id, driving_license_id, aut_user_id, audit, name, supplementtype, id, status]
+HHH000037: Columns: [area_full_name, contact_name, aut_time, address, idcard_id, create_time, contact_tel, failed_msg, source, area_id, add_user_id, aut_supplement_type, business_license_id, update_time, account_id, update_user_id, company_type_id, driving_license_id, aut_user_id, audit, name, supplementtype, id, status]
+ INFO [main] - HHH000108: Foreign keys: [sys_company_ibfk_1]
+HHH000108: Foreign keys: [sys_company_ibfk_1]
+ INFO [main] - HHH000126: Indexes: [fk_38s7vujhnej5mciy4yd4syr25, primary]
+HHH000126: Indexes: [fk_38s7vujhnej5mciy4yd4syr25, primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.sys_company_section
+HHH000261: Table found: ylwl_db.sys_company_section
+ INFO [main] - HHH000037: Columns: [parent_name, company_id, create_time, order_path, add_user_id, update_time, descs, update_user_id, parent_id, name, id, leav, status]
+HHH000037: Columns: [parent_name, company_id, create_time, order_path, add_user_id, update_time, descs, update_user_id, parent_id, name, id, leav, status]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.sys_company_type
+HHH000261: Table found: ylwl_db.sys_company_type
+ INFO [main] - HHH000037: Columns: [update_time, is_register, driving_license, create_time, update_user_id, is_aut, idcard, name, id, business_license, add_user_id]
+HHH000037: Columns: [update_time, is_register, driving_license, create_time, update_user_id, is_aut, idcard, name, id, business_license, add_user_id]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.sys_feedback
+HHH000261: Table found: ylwl_db.sys_feedback
+ INFO [main] - HHH000037: Columns: [update_time, account_id, create_time, update_user_id, id, add_user_id, type, title, info]
+HHH000037: Columns: [update_time, account_id, create_time, update_user_id, id, add_user_id, type, title, info]
+ INFO [main] - HHH000108: Foreign keys: [sys_feedback_ibfk_1]
+HHH000108: Foreign keys: [sys_feedback_ibfk_1]
+ INFO [main] - HHH000126: Indexes: [fk_668gbe2qdwb1r3an5r6nqm658, primary]
+HHH000126: Indexes: [fk_668gbe2qdwb1r3an5r6nqm658, primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.sys_lgistics_companies
+HHH000261: Table found: ylwl_db.sys_lgistics_companies
+ INFO [main] - HHH000037: Columns: [update_time, code, create_time, update_user_id, name, index, id, add_user_id]
+HHH000037: Columns: [update_time, code, create_time, update_user_id, name, index, id, add_user_id]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.sys_menu
+HHH000261: Table found: ylwl_db.sys_menu
+ INFO [main] - HHH000037: Columns: [create_time, updata_user_id, type, add_user_id, expanded, update_time, update_user_id, parent_id, enable, name, resource_id, id, iconcls, soft]
+HHH000037: Columns: [create_time, updata_user_id, type, add_user_id, expanded, update_time, update_user_id, parent_id, enable, name, resource_id, id, iconcls, soft]
+ INFO [main] - HHH000108: Foreign keys: [sys_menu_ibfk_1]
+HHH000108: Foreign keys: [sys_menu_ibfk_1]
+ INFO [main] - HHH000126: Indexes: [fk_jpqjomwh26w9lxp1ba46xxvi8, primary]
+HHH000126: Indexes: [fk_jpqjomwh26w9lxp1ba46xxvi8, primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.sys_menu_app
+HHH000261: Table found: ylwl_db.sys_menu_app
+ INFO [main] - HHH000037: Columns: [path, update_time, app_type, create_time, update_user_id, name, id, iconcls_color, type, iconcls, add_user_id]
+HHH000037: Columns: [path, update_time, app_type, create_time, update_user_id, name, id, iconcls_color, type, iconcls, add_user_id]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.sys_parameter_manage
+HHH000261: Table found: ylwl_db.sys_parameter_manage
+ INFO [main] - HHH000037: Columns: [val, update_time, create_time, update_user_id, description, id, type, add_user_id]
+HHH000037: Columns: [val, update_time, create_time, update_user_id, description, id, type, add_user_id]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.sys_paymentinterfac
+HHH000261: Table found: ylwl_db.sys_paymentinterfac
+ INFO [main] - HHH000037: Columns: [create_time, updata_user_id, signtype, merchant_id, add_user_id, version, recharge_fee, has_enable_single, update_time, update_user_id, notice_url, hasdefault, name, return_url, id, chartset, key]
+HHH000037: Columns: [create_time, updata_user_id, signtype, merchant_id, add_user_id, version, recharge_fee, has_enable_single, update_time, update_user_id, notice_url, hasdefault, name, return_url, id, chartset, key]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.sys_publicbankcard
+HHH000261: Table found: ylwl_db.sys_publicbankcard
+ INFO [main] - HHH000037: Columns: [number, paymentinterface_id, update_time, create_time, update_user_id, paymentinterfac, updata_user_id, id, bankname, add_user_id, version]
+HHH000037: Columns: [number, paymentinterface_id, update_time, create_time, update_user_id, paymentinterfac, updata_user_id, id, bankname, add_user_id, version]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.sys_resource
+HHH000261: Table found: ylwl_db.sys_resource
+ INFO [main] - HHH000037: Columns: [update_time, create_time, update_user_id, company_type_id, name, updata_user_id, remark, id, add_user_id, url]
+HHH000037: Columns: [update_time, create_time, update_user_id, company_type_id, name, updata_user_id, remark, id, add_user_id, url]
+ INFO [main] - HHH000108: Foreign keys: [sys_resource_ibfk_1]
+HHH000108: Foreign keys: [sys_resource_ibfk_1]
+ INFO [main] - HHH000126: Indexes: [fk_s7c2jb41xwq9dsny6b3f238an, primary]
+HHH000126: Indexes: [fk_s7c2jb41xwq9dsny6b3f238an, primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.sys_role
+HHH000261: Table found: ylwl_db.sys_role
+ INFO [main] - HHH000037: Columns: [create_time, is_aut, role_code, updata_user_id, add_user_id, is_admin, update_time, driving_license, update_user_id, company_type_id, idcard, name, id, status]
+HHH000037: Columns: [create_time, is_aut, role_code, updata_user_id, add_user_id, is_admin, update_time, driving_license, update_user_id, company_type_id, idcard, name, id, status]
+ INFO [main] - HHH000108: Foreign keys: [sys_role_ibfk_1]
+HHH000108: Foreign keys: [sys_role_ibfk_1]
+ INFO [main] - HHH000126: Indexes: [fk_81713x4aqid6crdfrgot93rqx, primary]
+HHH000126: Indexes: [fk_81713x4aqid6crdfrgot93rqx, primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.sys_send_message
+HHH000261: Table found: ylwl_db.sys_send_message
+ INFO [main] - HHH000037: Columns: [query_bal_success, create_time, owned_business, send_url, query_balance_url, add_user_id, type, return_blu_key, update_time, update_user_id, name, send_success, id, status]
+HHH000037: Columns: [query_bal_success, create_time, owned_business, send_url, query_balance_url, add_user_id, type, return_blu_key, update_time, update_user_id, name, send_success, id, status]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.sys_send_record
+HHH000261: Table found: ylwl_db.sys_send_record
+ INFO [main] - HHH000037: Columns: [send_message_id, send_point, update_time, create_time, update_user_id, phone, id, add_user_id, content, status]
+HHH000037: Columns: [send_message_id, send_point, update_time, create_time, update_user_id, phone, id, add_user_id, content, status]
+ INFO [main] - HHH000108: Foreign keys: [sys_send_record_ibfk_1]
+HHH000108: Foreign keys: [sys_send_record_ibfk_1]
+ INFO [main] - HHH000126: Indexes: [fk_nck0unhx89ya6ult78twbmgx6, primary]
+HHH000126: Indexes: [fk_nck0unhx89ya6ult78twbmgx6, primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.sys_track
+HHH000261: Table found: ylwl_db.sys_track
+ INFO [main] - HHH000037: Columns: [card_brand_id, description, track_no, track_read_no, capacity, sim_card_id, card_type_id, update_time, engine_no, update_user_id, card_plate_id, gps_device_no, id, engine_brand_id, gps_device_id, horsepower, company_id, create_time, yy_vehicel_key, yy_vehicel_id, tag_time, truck_status, add_user_id, vehiclelicense_img, track_long, account_id, sim_card_no]
+HHH000037: Columns: [card_brand_id, description, track_no, track_read_no, capacity, sim_card_id, card_type_id, update_time, engine_no, update_user_id, card_plate_id, gps_device_no, id, engine_brand_id, gps_device_id, horsepower, company_id, create_time, yy_vehicel_key, yy_vehicel_id, tag_time, truck_status, add_user_id, vehiclelicense_img, track_long, account_id, sim_card_no]
+ INFO [main] - HHH000108: Foreign keys: [sys_track_ibfk_4, sys_track_ibfk_3, sys_track_ibfk_6, sys_track_ibfk_5, sys_track_ibfk_2, sys_track_ibfk_1]
+HHH000108: Foreign keys: [sys_track_ibfk_4, sys_track_ibfk_3, sys_track_ibfk_6, sys_track_ibfk_5, sys_track_ibfk_2, sys_track_ibfk_1]
+ INFO [main] - HHH000126: Indexes: [fk_qsi9f8h82kfdnr67gsbysbaip, fk_26yp9avkc20865cmknw3brk3v, fk_7xonr6jfljuj3p131cwga5v56, fk_gp10lcpbv1mj8om3bwwom261y, fk_m640nyelmju9vkvh3cifspsde, fk_8rtv97nch8im2wupp51nbnxjp, primary]
+HHH000126: Indexes: [fk_qsi9f8h82kfdnr67gsbysbaip, fk_26yp9avkc20865cmknw3brk3v, fk_7xonr6jfljuj3p131cwga5v56, fk_gp10lcpbv1mj8om3bwwom261y, fk_m640nyelmju9vkvh3cifspsde, fk_8rtv97nch8im2wupp51nbnxjp, primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.sys_track_axle
+HHH000261: Table found: ylwl_db.sys_track_axle
+ INFO [main] - HHH000037: Columns: [axle_type_id, track_id, id, bearing_num_id]
+HHH000037: Columns: [axle_type_id, track_id, id, bearing_num_id]
+ INFO [main] - HHH000108: Foreign keys: [sys_track_axle_ibfk_3, sys_track_axle_ibfk_2, sys_track_axle_ibfk_1]
+HHH000108: Foreign keys: [sys_track_axle_ibfk_3, sys_track_axle_ibfk_2, sys_track_axle_ibfk_1]
+ INFO [main] - HHH000126: Indexes: [axle_type_id, track_id, bearing_num_id, primary]
+HHH000126: Indexes: [axle_type_id, track_id, bearing_num_id, primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.sys_track_container
+HHH000261: Table found: ylwl_db.sys_track_container
+ INFO [main] - HHH000037: Columns: [volume, containers_height, track_id, containers_width, container_no, containers_type_id, id, containers_long]
+HHH000037: Columns: [volume, containers_height, track_id, containers_width, container_no, containers_type_id, id, containers_long]
+ INFO [main] - HHH000108: Foreign keys: [sys_track_container_ibfk_2, sys_track_container_ibfk_1]
+HHH000108: Foreign keys: [sys_track_container_ibfk_2, sys_track_container_ibfk_1]
+ INFO [main] - HHH000126: Indexes: [track_id, containers_type_id, primary]
+HHH000126: Indexes: [track_id, containers_type_id, primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.sys_track_distribution
+HHH000261: Table found: ylwl_db.sys_track_distribution
+ INFO [main] - HHH000037: Columns: [distribution_user_name, operation_user_name, track_id, distribution_date, distribution_user_id, id, operation_user_id]
+HHH000037: Columns: [distribution_user_name, operation_user_name, track_id, distribution_date, distribution_user_id, id, operation_user_id]
+ INFO [main] - HHH000108: Foreign keys: []
+HHH000108: Foreign keys: []
+ INFO [main] - HHH000126: Indexes: [primary]
+HHH000126: Indexes: [primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.sys_track_img
+HHH000261: Table found: ylwl_db.sys_track_img
+ INFO [main] - HHH000037: Columns: [track_ahead_img, track_id, track_left_front_img, track_dashboard_img, track_right_front_img, track_side_img, id, track_behind_img, track_abehind_img, track_console_img]
+HHH000037: Columns: [track_ahead_img, track_id, track_left_front_img, track_dashboard_img, track_right_front_img, track_side_img, id, track_behind_img, track_abehind_img, track_console_img]
+ INFO [main] - HHH000108: Foreign keys: [fk_ittxjv9gkcs19wlgdgtc6590]
+HHH000108: Foreign keys: [fk_ittxjv9gkcs19wlgdgtc6590]
+ INFO [main] - HHH000126: Indexes: [fk_ittxjv9gkcs19wlgdgtc6590, primary]
+HHH000126: Indexes: [fk_ittxjv9gkcs19wlgdgtc6590, primary]
+ INFO [main] - HHH000261: Table found: ylwl_db.sys_transfer_type
+HHH000261: Table found: ylwl_db.sys_transfer_type
+ INFO [main] - HHH000037: Columns: [update_time, create_time, update_user_id, company_type_id, name, id, add_user_id]
+HHH000037: Columns: [update_time, create_time, update_user_id, company_type_id, name, id, add_user_id]
+ INFO [main] - HHH000108: Foreign keys: [sys_transfer_type_ibfk_1]
+HHH000108: Foreign keys: [sys_transfer_type_ibfk_1]
+ INFO [main] - HHH000126: Indexes: [fk_svcxhrmww4c6fqkvoniju00ko, primary]
+HHH000126: Indexes: [fk_svcxhrmww4c6fqkvoniju00ko, primary]
+ INFO [main] - HHH000232: Schema update complete
+HHH000232: Schema update complete
+ INFO [main] - Using DataSource [{
+	CreateTime:&quot;2017-07-06 15:48:58&quot;,
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:1214284410, ConnectTime:&quot;2017-07-06 15:48:58&quot;, UseCount:2, LastActiveTime:&quot;2017-07-06 15:49:00&quot;}
+	]
+}
+
+[
+	{
+	ID:1214284410, 
+	poolStatements:[
+		]
+	}
+]] of Hibernate SessionFactory for HibernateTransactionManager
+Using DataSource [{
+	CreateTime:&quot;2017-07-06 15:48:58&quot;,
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:1214284410, ConnectTime:&quot;2017-07-06 15:48:58&quot;, UseCount:2, LastActiveTime:&quot;2017-07-06 15:49:00&quot;}
+	]
+}
+
+[
+	{
+	ID:1214284410, 
+	poolStatements:[
+		]
+	}
+]] of Hibernate SessionFactory for HibernateTransactionManager
+[a=1, pt=1, puser.serverId=10125, puser.userName=贵州齐帛谷科技, puser.userPwd=123456, version=1]
+ INFO [main] - result:
+
+
+
+
+{&quot;flag&quot;:true,&quot;msg&quot;:&quot;&quot;,&quot;data&quot;:[{&quot;id&quot;:2341676,&quot;name&quot;:&quot;贵州齐帛谷科技&quot;,&quot;ip&quot;:&quot;120.55.187.229&quot;,&quot;userType&quot;:2}],&quot;ml&quot;:[],
+&quot;jsessionid&quot;:&quot;WbFPv222VgOyTjG9meVLqQ__&quot;,&quot;exkey&quot;:&quot;07933949ac058d34104191756a6f3926-1499413823000-2341676-10125-0-10.29.108.91&quot;}
+
+result:
+
+
+
+
+{&quot;flag&quot;:true,&quot;msg&quot;:&quot;&quot;,&quot;data&quot;:[{&quot;id&quot;:2341676,&quot;name&quot;:&quot;贵州齐帛谷科技&quot;,&quot;ip&quot;:&quot;120.55.187.229&quot;,&quot;userType&quot;:2}],&quot;ml&quot;:[],
+&quot;jsessionid&quot;:&quot;WbFPv222VgOyTjG9meVLqQ__&quot;,&quot;exkey&quot;:&quot;07933949ac058d34104191756a6f3926-1499413823000-2341676-10125-0-10.29.108.91&quot;}
+
+[a=1, exkey=07933949ac058d34104191756a6f3926-1499413823000-2341676-10125-0-10.29.108.91, tableName=client, version=1]
+ INFO [main] - result:
+
+
+
+{&quot;flag&quot;:true,&quot;msg&quot;:&quot;&quot;,&quot;totalCount&quot;:1,&quot;data&quot;:[
+		  
+		 
+		 
+		  {&quot;id&quot;:154797,&quot;compyname&quot;:&quot;齐帛谷物流平台&quot;,&quot;compyperson&quot;:&quot;--&quot;,&quot;phone&quot;:&quot;13037806522&quot;,&quot;officeaddrs&quot;:&quot;贵州省贵阳市&quot;}		
+        
+		 
+		 
+		 
+ ]}	
+
+
+
+result:
+
+
+
+{&quot;flag&quot;:true,&quot;msg&quot;:&quot;&quot;,&quot;totalCount&quot;:1,&quot;data&quot;:[
+		  
+		 
+		 
+		  {&quot;id&quot;:154797,&quot;compyname&quot;:&quot;齐帛谷物流平台&quot;,&quot;compyperson&quot;:&quot;--&quot;,&quot;phone&quot;:&quot;13037806522&quot;,&quot;officeaddrs&quot;:&quot;贵州省贵阳市&quot;}		
+        
+		 
+		 
+		 
+ ]}	
+
+
+
+[a=1, exkey=07933949ac058d34104191756a6f3926-1499413823000-2341676-10125-0-10.29.108.91, group.groupName=贵州齐帛谷分组001, tableName=group, version=1]
+ INFO [main] - result:
+
+
+
+{&quot;flag&quot;:true,&quot;msg&quot;:&quot;&quot;,&quot;totalCount&quot;:1,&quot;data&quot;:[
+           
+		  
+		  {&quot;id&quot;:3337784,&quot;groupName&quot;:&quot;贵州齐帛谷分组001&quot;,&quot;createtime&quot;:&quot;2017-06-07 10:24:17&quot;,&quot;mintime&quot;:30,&quot;maxtime&quot;:3600,&quot;userCount&quot;:100000,&quot;vhcCount&quot;:100000,&quot;clientId&quot;:154797}		
+		 
+		 
+		 
+ ]}	
+
+
+
+
+result:
+
+
+
+{&quot;flag&quot;:true,&quot;msg&quot;:&quot;&quot;,&quot;totalCount&quot;:1,&quot;data&quot;:[
+           
+		  
+		  {&quot;id&quot;:3337784,&quot;groupName&quot;:&quot;贵州齐帛谷分组001&quot;,&quot;createtime&quot;:&quot;2017-06-07 10:24:17&quot;,&quot;mintime&quot;:30,&quot;maxtime&quot;:3600,&quot;userCount&quot;:100000,&quot;vhcCount&quot;:100000,&quot;clientId&quot;:154797}		
+		 
+		 
+		 
+ ]}	
+
+
+
+
+ INFO [main] - 请求地址:http://120.55.187.229:89/gpsonline/GPSAPI?
+请求地址:http://120.55.187.229:89/gpsonline/GPSAPI?
+ INFO [main] - 请求报文(已做过URLEncode编码):[method=loginSystem&amp;name=%E8%B4%B5%E5%B7%9E%E9%BD%90%E5%B8%9B%E8%B0%B7%E7%A7%91%E6%8A%80&amp;pwd=123456&amp;version=1]
+请求报文(已做过URLEncode编码):[method=loginSystem&amp;name=%E8%B4%B5%E5%B7%9E%E9%BD%90%E5%B8%9B%E8%B0%B7%E7%A7%91%E6%8A%80&amp;pwd=123456&amp;version=1]
+ INFO [main] - 请求报文:[method=loginSystem&amp;name=%E8%B4%B5%E5%B7%9E%E9%BD%90%E5%B8%9B%E8%B0%B7%E7%A7%91%E6%8A%80&amp;pwd=123456&amp;version=1]
+请求报文:[method=loginSystem&amp;name=%E8%B4%B5%E5%B7%9E%E9%BD%90%E5%B8%9B%E8%B0%B7%E7%A7%91%E6%8A%80&amp;pwd=123456&amp;version=1]
+ INFO [main] - HTTP Return Status-Code:[200]
+HTTP Return Status-Code:[200]
+ INFO [main] - 同步返回报文:[{&quot;version&quot;:1,&quot;success&quot;:true,&quot;uid&quot;:2341676,&quot;uKey&quot;:&quot;a0c3aed8a9cd934903e10d0225f315a0&quot;,&quot;userType&quot;:2,&quot;creater&quot;:2232219}]
+同步返回报文:[{&quot;version&quot;:1,&quot;success&quot;:true,&quot;uid&quot;:2341676,&quot;uKey&quot;:&quot;a0c3aed8a9cd934903e10d0225f315a0&quot;,&quot;userType&quot;:2,&quot;creater&quot;:2232219}]
+ INFO [main] - result:{&quot;version&quot;:1,&quot;success&quot;:true,&quot;uid&quot;:2341676,&quot;uKey&quot;:&quot;a0c3aed8a9cd934903e10d0225f315a0&quot;,&quot;userType&quot;:2,&quot;creater&quot;:2232219}
+result:{&quot;version&quot;:1,&quot;success&quot;:true,&quot;uid&quot;:2341676,&quot;uKey&quot;:&quot;a0c3aed8a9cd934903e10d0225f315a0&quot;,&quot;userType&quot;:2,&quot;creater&quot;:2232219}
+</system-out>
+  </testcase>
+</testsuite>

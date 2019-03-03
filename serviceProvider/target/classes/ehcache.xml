@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd">  
+     
+    <diskStore path="java.io.tmpdir/ehcache"/>  
+      
+    <!-- 默认缓存 -->  
+    <defaultCache  
+           maxElementsInMemory="1000"  
+           eternal="false"  
+           timeToIdleSeconds="120"  
+           timeToLiveSeconds="120"  
+           overflowToDisk="false"/>  
+             
+    <!-- 菜单缓存 -->      
+    <cache name="menuCache"   
+           maxElementsInMemory="1000"   
+           eternal="false"  
+           timeToIdleSeconds="120"  
+           timeToLiveSeconds="120"  
+           overflowToDisk="false"   
+           memoryStoreEvictionPolicy="LRU"/>  
+           
+    <!-- 角色缓存 -->      
+    <cache name="roleCache"   
+           maxElementsInMemory="1000"   
+           eternal="false"  
+           timeToIdleSeconds="120"  
+           timeToLiveSeconds="120"  
+           overflowToDisk="false"   
+           memoryStoreEvictionPolicy="LRU"/>  
+           
+      <!-- 区域缓存 -->      
+    <cache name="role_menu_cache"   
+           maxElementsInMemory="1000"   
+           eternal="false"  
+           timeToIdleSeconds="120"  
+           timeToLiveSeconds="120"  
+           overflowToDisk="false"   
+           memoryStoreEvictionPolicy="LRU"/>
+           
+           
+    <!-- 手机验证码缓存 -->      
+    <cache name="phoneCode"   
+           maxElementsInMemory="50000"   
+           eternal="false"  
+           timeToIdleSeconds="180"  
+           timeToLiveSeconds="180"  
+           overflowToDisk="false"   
+           memoryStoreEvictionPolicy="LRU"/>
+    
+          <!--获取区域数据  永久-->      
+    <cache name="areaCache"   
+           maxElementsInMemory="9000"   
+           eternal="true"  
+           timeToIdleSeconds="120"  
+           timeToLiveSeconds="120"  
+           overflowToDisk="false"   
+           memoryStoreEvictionPolicy="LRU"/>  
+    <!--收货验证码 -->      
+    <cache name="receiptCode"   
+           maxElementsInMemory="50000"   
+           eternal="false"  
+           timeToIdleSeconds="3600"  
+           timeToLiveSeconds="3600"  
+           overflowToDisk="false"   
+           memoryStoreEvictionPolicy="LRU"/>
+    
+      <!--收货验证码 -->      
+    <cache name="receiptTimeOut"   
+           maxElementsInMemory="50000"   
+           eternal="false"  
+           timeToIdleSeconds="3600"  
+           timeToLiveSeconds="3600"  
+           overflowToDisk="false"   
+           memoryStoreEvictionPolicy="LRU"/>
+           
+    <!-- 手机验证码缓存 -->      
+    <cache name="phoneTimeOut"   
+           maxElementsInMemory="50000"   
+           eternal="false"  
+           timeToIdleSeconds="60"  
+           timeToLiveSeconds="60"  
+           overflowToDisk="false"   
+           memoryStoreEvictionPolicy="LRU"/>
+    
+    
+    <!-- 确认收货缓存 -->      
+    <cache name="confirmreceipt"   
+           maxElementsInMemory="50000"   
+           eternal="false"  
+           timeToIdleSeconds="600"  
+           timeToLiveSeconds="600"  
+           overflowToDisk="false"   
+           memoryStoreEvictionPolicy="LRU"/> 
+           
+    
+    <!-- 菜单和角色关信息缓存 -->      
+    <cache name="rolelistsecurity"   
+           maxElementsInMemory="50000"   
+           eternal="false"  
+           timeToIdleSeconds="600"  
+           timeToLiveSeconds="600"  
+           overflowToDisk="false"   
+           memoryStoreEvictionPolicy="LRU"/>  
+           
+    <!-- 菜单和角色关信息缓存 -->      
+    <cache name="role_menu_code"   
+           maxElementsInMemory="50000"   
+           eternal="false"  
+           timeToIdleSeconds="600"  
+           timeToLiveSeconds="600"  
+           overflowToDisk="false"   
+           memoryStoreEvictionPolicy="LRU"/>  
+    
+     
+      
+</ehcache>  

@@ -1,0 +1,4 @@
+create /apps "apps"
+create /apps/lock "appsLock"
+create /apps/xiaoBiaoRenApps "xiaoBiaoRenApps"
+create /apps/xiaoBiaoRenApps/lock  "xiaoBiaoRenAppsLock"

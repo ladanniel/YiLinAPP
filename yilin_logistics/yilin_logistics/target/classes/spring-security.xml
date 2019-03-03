@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/security
+		http://www.springframework.org/schema/security/spring-security.xsd">
+	
+	<context:annotation-config/>
+	
+    <!-- 安全控制 -->
+    <http pattern="/system/user/view/login.do" security="none"/>
+    <http pattern="/resources/**" security="none"/>
+    <http pattern="/commonFtl/image.jsp" security="none"/>
+    <http pattern="/aut/authenticat/**" security="none"/>
+    <http pattern="/druid/**" security="none"/>
+   
+	 
+	<beans:bean id="authenticationProcessingFilterEntryPoint" class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">
+		<beans:property name="loginFormUrl" value="/system/user/view/login.do"></beans:property>
+	</beans:bean>
+	
+	<beans:bean id="sessionRegistry" class="org.springframework.security.core.session.SessionRegistryImpl" />
+	
+	<authentication-manager alias="authenticationManager">
+        <authentication-provider ref="authenticationProvier" />
+    </authentication-manager>
+
+	<beans:bean id="authenticationProvier" class="com.memory.platform.security.AuthenticationProvider">
+		<beans:property name="userDetailsService" ref="userDetailsService"></beans:property>
+	</beans:bean>
+	
+	<beans:bean id="userDetailsService" class="com.memory.platform.security.UserDetailsService"/>
+	
+	
+	<http use-expressions="true" entry-point-ref="authenticationProcessingFilterEntryPoint">
+		<logout delete-cookies="JSESSIONID"  invalidate-session="true" />
+		<custom-filter ref="loginFilter" position="FORM_LOGIN_FILTER"  />
+		<custom-filter ref="securityFilter" before="FILTER_SECURITY_INTERCEPTOR"/>
+		<session-management session-fixation-protection="none"  />
+	</http>
+	
+	
+	<beans:bean id="loginFilter" class="org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter">
+		<beans:property name="authenticationFailureHandler" ref="simpleUrlAuthenticationFailureHandler"/>
+		<beans:property name="authenticationManager" ref="authenticationManager"/>
+	</beans:bean>
+	
+	<beans:bean id="simpleUrlAuthenticationFailureHandler" class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
+		<beans:property name="defaultFailureUrl" value="/system/admin/index.do"></beans:property>
+		<beans:property name="useForward" value="true"></beans:property>
+	</beans:bean>
+	
+	<beans:bean id="securityFilter" class="com.memory.platform.security.SecurityFilter">
+    	<!-- 用户拥有的权限 -->
+    	<beans:property name="authenticationManager" ref="authenticationManager" />
+    	<!-- 用户是否拥有所请求资源的权限 -->
+    	<beans:property name="accessDecisionManager" ref="accessDecisionManager" />
+    	<!-- 资源与权限对应关系 -->
+    	<beans:property name="securityMetadataSource" ref="securityMetadataSource" />
+    </beans:bean>
+	
+	<beans:bean id="securityMetadataSource" class="com.memory.platform.security.SecurityMetadataSource"/>
+    <beans:bean id="accessDecisionManager" class="com.memory.platform.security.AccessDecisionManager"/>
+	
+</beans:beans>
